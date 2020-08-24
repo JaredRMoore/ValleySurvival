@@ -1,0 +1,12 @@
+ValleySurvival - Controls
+
+W - Forwards
+A - Left
+S - Backwards
+D - Right
+
+X - Crouch
+
+Spacebar - Jump
+
+Left Mouse Click - Activate/Select
