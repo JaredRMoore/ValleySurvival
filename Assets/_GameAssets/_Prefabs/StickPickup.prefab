@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 18636417757606961}
   - component: {fileID: 18636417758901267}
   - component: {fileID: 18636417759901395}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: TreeLog01_LOD2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -89,7 +89,7 @@ GameObject:
   - component: {fileID: 18636417757606963}
   - component: {fileID: 18636417758901269}
   - component: {fileID: 18636417759901397}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: TreeLog01_LOD1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -167,7 +167,7 @@ GameObject:
   - component: {fileID: 18636417757606965}
   - component: {fileID: 18636417758901271}
   - component: {fileID: 18636417759901399}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: TreeLog01_LOD0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -247,7 +247,7 @@ GameObject:
   - component: {fileID: 968923230500648905}
   - component: {fileID: 4066251102434342657}
   - component: {fileID: 8478111326777355249}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: StickPickup
   m_TagString: Untagged
   m_Icon: {fileID: 0}

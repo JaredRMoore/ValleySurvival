@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class InteractionPointer : MonoBehaviour
 {
+    public LayerMask layerMask;
+
     // Update is called once per frame
     void Update()
     {
@@ -13,7 +15,7 @@ public class InteractionPointer : MonoBehaviour
             Ray ray = new Ray(Camera.main.transform.position, Camera.main.transform.forward);
 
             RaycastHit hit;
-            if (Physics.Raycast(ray, out hit, 2.0f, -1))
+            if (Physics.Raycast(ray, out hit, 3.0f, layerMask))
             {
                 Interactible interactible = hit.collider.GetComponent<Interactible>();
                 if (interactible != null)

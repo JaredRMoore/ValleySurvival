@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8173717191274860282}
   - component: {fileID: 1138328373978314675}
   - component: {fileID: 657344880328069516}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RockPickup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
