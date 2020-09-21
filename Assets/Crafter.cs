@@ -13,7 +13,6 @@ public class Crafter : MonoBehaviour
         // Move position forward
         // Using raycast to place
     }
-
     
     // Start is called before the first frame update
     void Start()
