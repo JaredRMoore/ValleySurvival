@@ -27,8 +27,8 @@ public class AnimationTags
 }
 public class Tags
 {
-    public const string LOOK_ROOT = "Master Camera";
-    public const string ZOOM_CAMERA = "FP Camera";
+    public const string LOOK_ROOT = "MainCamera";
+    public const string ZOOM_CAMERA = "WeaponCamera";
     public const string CROSSHAIR = "Crosshair";
 
     public const string AXE_TAG = "Axe";

@@ -20,11 +20,19 @@ public class WeaponManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Alpha1))
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            TurnOnSelectedWeapon(0);
+        }
+        if (Input.GetKeyDown(KeyCode.Keypad1))
         {
             TurnOnSelectedWeapon(0);
         }
         if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            TurnOnSelectedWeapon(1);
+        }
+        if (Input.GetKeyDown(KeyCode.Keypad2))
         {
             TurnOnSelectedWeapon(1);
         }

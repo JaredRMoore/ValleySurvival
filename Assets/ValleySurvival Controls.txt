@@ -1,5 +1,6 @@
 ValleySurvival - Controls
 
+-MOVEMENT-
 W - Forwards
 A - Left
 S - Backwards
@@ -9,4 +10,10 @@ X - Crouch
 
 Spacebar - Jump
 
-Left Mouse Click - Activate/Select
+-WEAPONS-
+
+Alpha Keys
+1 - Hatchet (once crafted)
+2 - Revolver (once crafted)
+
+Left Mouse Click - Shoot
