@@ -10,7 +10,7 @@ public class PlayerAttack : MonoBehaviour
     private float nextTimeToFire;
     public float damage = 20f;
 
-    private Animator zoomCameraAnim;
+    public Animator zoomCameraAnim;
     private bool zoomed;
 
     private Camera mainCam;
@@ -21,8 +21,15 @@ public class PlayerAttack : MonoBehaviour
     {
         weapon_Manager = GetComponent<WeaponManager>();
 
-        zoomCameraAnim = transform.Find(Tags.LOOK_ROOT)
-                                        .transform.Find(Tags.ZOOM_CAMERA).GetComponent<Animator>();
+        // Transform cam = transform.Find(Tags.LOOK_ROOT);
+        // if (cam != null)
+        //{
+        //    Transform zoomCam = cam.Find(Tags.ZOOM_CAMERA);
+        //    if (zoomCam != null)
+        //        zoomCameraAnim = zoomCam.GetComponent<Animator>();
+        //}
+        //zoomCameraAnim = transform.Find(Tags.LOOK_ROOT)
+        //                                .transform.Find(Tags.ZOOM_CAMERA).GetComponent<Animator>();
 
         crosshair = GameObject.FindWithTag(Tags.CROSSHAIR);
 
@@ -103,5 +110,4 @@ public class PlayerAttack : MonoBehaviour
             }
         }
     }
-    // Zoom in and out
 }
