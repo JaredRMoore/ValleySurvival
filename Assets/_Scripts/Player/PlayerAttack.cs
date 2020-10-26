@@ -110,4 +110,16 @@ public class PlayerAttack : MonoBehaviour
             }
         }
     }
+    void BulletFired()
+    {
+        RaycastHit hit;
+
+        if (Physics.Raycast(mainCam.transform.position, mainCam.transform.forward, out hit))
+        {
+            if (hit.transform.tag == Tags.ENEMY_TAG)
+            {
+                hit.transform.GetComponent<HealthScript>().ApplyDamage(damage);
+            }
+        }
+    }
 }

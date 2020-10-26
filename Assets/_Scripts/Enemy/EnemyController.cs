@@ -34,12 +34,18 @@ public class EnemyController : MonoBehaviour
 
     private Transform target;
 
+    public GameObject attack_Point;
+
+    private EnemyAudio enemy_Audio;
+
     void Awake()
     {
         enemy_Anim = GetComponent<EnemyAnimator>();
         navAgent = GetComponent<NavMeshAgent>();
 
         target = GameObject.FindWithTag(Tags.PLAYER_TAG).transform;
+
+        enemy_Audio = GetComponentInChildren<EnemyAudio>();
     }
 
     // Start is called before the first frame update
@@ -67,6 +73,11 @@ public class EnemyController : MonoBehaviour
         if (enemy_State == EnemyState.CHASE)
         {
             Chase();
+        }
+
+        if (enemy_State == EnemyState.ATTACK)
+        {
+            Attack();
         }
     }
 
@@ -103,6 +114,7 @@ public class EnemyController : MonoBehaviour
             enemy_State = EnemyState.CHASE;
 
             // Play spotted audio
+            enemy_Audio.Play_ScreamSound();
         }
     }
     void Chase()
@@ -172,7 +184,7 @@ public class EnemyController : MonoBehaviour
             attack_Timer = 0f;
 
             // Play the attack sound
-
+            enemy_Audio.Play_AttackSound();
         }
 
         if (Vector3.Distance(transform.position, target.position) >
@@ -194,5 +206,22 @@ public class EnemyController : MonoBehaviour
         NavMesh.SamplePosition(randDir, out navHit, rand_Radius, -1);
 
         navAgent.SetDestination(navHit.position);
+    }
+
+    void Turn_On_AttackPoint()
+    {
+        attack_Point.SetActive(true);
+    }
+    void Turn_Off_AttackPoint()
+    {
+        if (attack_Point.activeInHierarchy)
+        {
+            attack_Point.SetActive(false);
+        }
+    }
+
+    public EnemyState Enemy_State
+    {
+        get; set;
     }
 }
