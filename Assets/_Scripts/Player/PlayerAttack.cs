@@ -74,13 +74,15 @@ public class PlayerAttack : MonoBehaviour
                 if (weapon_Manager.GetCurrentSelectedWeapon().tag == Tags.AXE_TAG)
                 {
                     weapon_Manager.GetCurrentSelectedWeapon().ShootAnimation();
+
+                    BulletFired();
                 }
                 // Handle shoot
                 if (weapon_Manager.GetCurrentSelectedWeapon().bulletType == WeaponBulletType.BULLET)
                 {
                     weapon_Manager.GetCurrentSelectedWeapon().ShootAnimation();
 
-                    // BulletFired();
+                    BulletFired();
                 }
             }
             // If input gets mouse button 0

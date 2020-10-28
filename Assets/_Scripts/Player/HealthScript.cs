@@ -18,6 +18,8 @@ public class HealthScript : MonoBehaviour
 
     private EnemyAudio enemyAudio;
 
+    private PlayerStats player_Stats;
+
     void Awake()
     {
         if (is_Boar || is_Cannibal)
@@ -32,7 +34,7 @@ public class HealthScript : MonoBehaviour
 
         if (is_Player)
         {
-
+            player_Stats = GetComponent<PlayerStats>();
         }
     }
 
@@ -47,7 +49,7 @@ public class HealthScript : MonoBehaviour
         if (is_Player)
         {
             // Show the stats (display the health UI value)
-
+            player_Stats.Display_HealthStats(health);
         }
         if (is_Boar || is_Cannibal)
         {
@@ -73,7 +75,9 @@ public class HealthScript : MonoBehaviour
         {
             GetComponent<Animator>().enabled = false;
             GetComponent<BoxCollider>().isTrigger = false;
-            GetComponent<Rigidbody>().AddTorque(-transform.forward * 10f);
+            Rigidbody rb = GetComponent<Rigidbody>();
+            rb.isKinematic = false;
+            rb.AddTorque(-transform.forward * 10f);
 
             enemy_Controller.enabled = false;
             navAgent.enabled = false;
@@ -81,7 +85,8 @@ public class HealthScript : MonoBehaviour
 
             StartCoroutine(DeadSound());
 
-            // EnemyManager - Spawn more enemies (required?)
+            // EnemyManager - Spawn more enemies
+            EnemyManager.instance.EnemyDied(true);
         }
 
         if (is_Boar)
@@ -94,7 +99,8 @@ public class HealthScript : MonoBehaviour
 
             StartCoroutine(DeadSound());
 
-            // EnemyManager - Spawn more enemies (required?)
+            // EnemyManager - Spawn more enemies
+            EnemyManager.instance.EnemyDied(false);
         }
 
         if (is_Player)
@@ -107,6 +113,7 @@ public class HealthScript : MonoBehaviour
             }
 
             // Call EnemyManager to stop spawning enemies
+            EnemyManager.instance.StopSpawning();
 
             GetComponent<FirstPersonController>().enabled = false;
             GetComponent<PlayerAttack>().enabled = false;

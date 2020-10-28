@@ -43,7 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fcc55326c77f664b9266e3d681ce7a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 2
+  damage: 15
   radius: 1
   layerMask:
     serializedVersion: 2
@@ -1693,8 +1693,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.28, y: 1.75, z: 0.21}
-  m_Center: {x: 0, y: 0.88, z: 0}
+  m_Size: {x: 0.58998674, y: 1.9660485, z: 0.528717}
+  m_Center: {x: -0.022154475, y: 0.90619147, z: -0.013797512}
 --- !u!54 &7041395833178039766
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1707,7 +1707,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -1758,7 +1758,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walk_Speed: 0.5
-  run_Speed: 2.5
+  run_Speed: 5
   chase_Distance: 20
   attack_Distance: 1.8
   chase_After_Attack_Distance: 2
@@ -1779,7 +1779,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 012b4a4d052e0c6498bec3cba1e6c0cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  health: 150
   is_Player: 0
   is_Boar: 0
   is_Cannibal: 1
