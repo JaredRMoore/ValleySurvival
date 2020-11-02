@@ -11,6 +11,7 @@ public class HealthScript : MonoBehaviour
     private EnemyController enemy_Controller;
 
     public float health = 100f;
+    public float stamina = 100f;
 
     public bool is_Player, is_Boar, is_Cannibal;
 
@@ -19,6 +20,9 @@ public class HealthScript : MonoBehaviour
     private EnemyAudio enemyAudio;
 
     private PlayerStats player_Stats;
+
+    public float staminaDecay = 0f;
+    public float healthDecay = 0f;
 
     void Awake()
     {
@@ -36,6 +40,36 @@ public class HealthScript : MonoBehaviour
         {
             player_Stats = GetComponent<PlayerStats>();
         }
+    }
+
+    private void Update()
+    {
+        if (player_Stats != null)
+        {
+            if (stamina > 0)
+            {
+                stamina -= staminaDecay * Time.deltaTime;
+                player_Stats.Display_StaminaStats(stamina);
+            }
+            else
+            {
+                ApplyDamage(healthDecay * Time.deltaTime);
+            }
+        }
+    }
+
+    public void AddToStamina(float amount)
+    {
+        stamina += amount;
+        if (stamina > 100)
+            stamina = 100;
+    }
+
+    public void AddToHealth(float amount)
+    {
+        health += amount;
+        if (health > 100)
+            health = 100;
     }
 
     public void ApplyDamage(float damage)

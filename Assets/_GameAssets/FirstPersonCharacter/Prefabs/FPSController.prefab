@@ -389,9 +389,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
+  stamina: 100
   is_Player: 1
   is_Boar: 0
   is_Cannibal: 0
+  staminaDecay: 0.5
+  healthDecay: 1
 --- !u!114 &5545405970577306696
 MonoBehaviour:
   m_ObjectHideFlags: 0
