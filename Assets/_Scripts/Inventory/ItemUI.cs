@@ -9,13 +9,23 @@ public class ItemUI : MonoBehaviour
     public Item item;
 
     // Start is called before the first frame update
-
     private void Start()
     {
         SetItem(item);
+        Button button = GetComponent<Button>();
+        if (button)
+            button.onClick.AddListener(UseItem);
     }
 
-    // Update is called once per frame
+    void UseItem()
+    {
+        if (item)
+        {
+            item.Use();
+            SetItem(null);
+            // To do - set the corresponding slot in the inventory
+        }
+    }
 
     public void SetItem(Item it)
     {

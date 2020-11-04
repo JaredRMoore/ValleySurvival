@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1519537717051864
+--- !u!1 &2225844319048688381
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,48 +8,48 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4379549780084284}
-  - component: {fileID: 33808305689578686}
-  - component: {fileID: 23184704365307464}
-  - component: {fileID: 64399969875766590}
-  - component: {fileID: 57409070}
-  - component: {fileID: 57409071}
+  - component: {fileID: 2227347443597829401}
+  - component: {fileID: 2206398668301086619}
+  - component: {fileID: 2212659133143074157}
+  - component: {fileID: 2162401761167625755}
+  - component: {fileID: 2226660165506374923}
+  - component: {fileID: 2226660165506374922}
   m_Layer: 8
-  m_Name: Can_3
+  m_Name: Food
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4379549780084284
+--- !u!4 &2227347443597829401
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1519537717051864}
+  m_GameObject: {fileID: 2225844319048688381}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 88.4275, y: 16.115, z: 126.59811}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &33808305689578686
+--- !u!33 &2206398668301086619
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1519537717051864}
+  m_GameObject: {fileID: 2225844319048688381}
   m_Mesh: {fileID: 4300000, guid: 9ca25a522d659be4eb345d3fa575c9ce, type: 3}
---- !u!23 &23184704365307464
+--- !u!23 &2212659133143074157
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1519537717051864}
+  m_GameObject: {fileID: 2225844319048688381}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -81,13 +81,13 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &64399969875766590
+--- !u!64 &2162401761167625755
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1519537717051864}
+  m_GameObject: {fileID: 2225844319048688381}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
@@ -95,13 +95,13 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: 9ca25a522d659be4eb345d3fa575c9ce, type: 3}
---- !u!114 &57409070
+--- !u!114 &2226660165506374923
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1519537717051864}
+  m_GameObject: {fileID: 2225844319048688381}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: eec169911a3144d40813c99ea003a5b2, type: 3}
@@ -109,13 +109,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: 5d6545cd633c2cc4da29f57e8ad74510, type: 2}
   respawnTime: 300
---- !u!114 &57409071
+--- !u!114 &2226660165506374922
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1519537717051864}
+  m_GameObject: {fileID: 2225844319048688381}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cc732404a1ef0ca449e23ab49d1056d7, type: 3}
@@ -124,7 +124,7 @@ MonoBehaviour:
   onActivate:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 57409070}
+      - m_Target: {fileID: 2226660165506374923}
         m_MethodName: Pickup
         m_Mode: 1
         m_Arguments:

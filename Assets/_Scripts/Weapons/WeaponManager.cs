@@ -56,5 +56,4 @@ public class WeaponManager : MonoBehaviour
     {
         return weapons[current_Weapon_Index];
     }
-
 }

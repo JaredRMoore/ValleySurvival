@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ac02c8e3faf27e342a8943722325945e, type: 3}
-  m_Name: Cola
+  m_Name: Food
   m_EditorClassIdentifier: 
-  icon: {fileID: 21300000, guid: a4d5264ced0c6a448ba4e0a051b8c118, type: 3}
+  icon: {fileID: 21300000, guid: a9dff8c8afd190e4199d641514d8d8fe, type: 3}
   color: {r: 1, g: 1, b: 1, a: 1}
-  prefab: {fileID: 4902818770681124424, guid: 4458fe1707737d54e854269a80194148, type: 3}
+  prefab: {fileID: 2226660165506374923, guid: c604790e48f6da541be75453c8d43908, type: 3}
   healthRestored: 0
-  staminaRestored: 25
+  staminaRestored: 50

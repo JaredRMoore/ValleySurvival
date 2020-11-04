@@ -10,7 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ac02c8e3faf27e342a8943722325945e, type: 3}
-  m_Name: Tinned Food
+  m_Name: Medkit
   m_EditorClassIdentifier: 
-  icon: {fileID: 21300000, guid: a9dff8c8afd190e4199d641514d8d8fe, type: 3}
+  icon: {fileID: 21300000, guid: 936c59fd3c3b090419122c413285a8e2, type: 3}
   color: {r: 1, g: 1, b: 1, a: 1}
+  prefab: {fileID: 8461509816406865059, guid: e79a86574973d61478bb01810d3399e2, type: 3}
+  healthRestored: 50
+  staminaRestored: 0
