@@ -63,6 +63,7 @@ public class HealthScript : MonoBehaviour
         stamina += amount;
         if (stamina > 100)
             stamina = 100;
+        player_Stats.Display_StaminaStats(stamina);
     }
 
     public void AddToHealth(float amount)
@@ -70,6 +71,7 @@ public class HealthScript : MonoBehaviour
         health += amount;
         if (health > 100)
             health = 100;
+        player_Stats.Display_HealthStats(health);
     }
 
     public void ApplyDamage(float damage)

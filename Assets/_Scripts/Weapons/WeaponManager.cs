@@ -36,6 +36,12 @@ public class WeaponManager : MonoBehaviour
         {
             TurnOnSelectedWeapon(1);
         }
+
+        // Sheathe current weapon
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            TurnOffSelectedWeapon(current_Weapon_Index);
+        }
     }
     void TurnOnSelectedWeapon(int weaponIndex)
     {
@@ -50,6 +56,12 @@ public class WeaponManager : MonoBehaviour
 
         // Store the current selected weapon index
         current_Weapon_Index = weaponIndex;
+    }
+
+    void TurnOffSelectedWeapon(int weaponIndex)
+    {
+        // Turn off the current weapon
+        weapons[current_Weapon_Index].gameObject.SetActive(false);
     }
 
     public WeaponHandler GetCurrentSelectedWeapon()
