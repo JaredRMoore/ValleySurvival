@@ -17,7 +17,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
         public float smoothTime = 5f;
         public bool lockCursor = true;
 
-
         private Quaternion m_CharacterTargetRot;
         private Quaternion m_CameraTargetRot;
         private bool m_cursorIsLocked = true;
@@ -27,7 +26,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
             m_CharacterTargetRot = character.localRotation;
             m_CameraTargetRot = camera.localRotation;
         }
-
 
         public void LookRotation(Transform character, Transform camera)
         {
@@ -63,7 +61,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         {
             lockCursor = value;
             if(!lockCursor)
-            {//we force unlock the cursor if the user disable the cursor locking helper
+            {// We force unlock the cursor if the user disable the cursor locking helper
                 Cursor.lockState = CursorLockMode.None;
                 Cursor.visible = true;
             }
@@ -71,7 +69,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         public void UpdateCursorLock()
         {
-            //if the user set "lockCursor" we check & properly lock the cursos
+            // If the user set "lockCursor" we check & properly lock the cursos
             if (lockCursor)
                 InternalLockUpdate();
         }
@@ -114,6 +112,5 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
             return q;
         }
-
     }
 }

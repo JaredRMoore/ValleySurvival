@@ -10,10 +10,11 @@ X - Crouch
 
 Spacebar - Jump
 
--WEAPONS-
+-WEAPONS & INTERACTING-
 
 Alpha Keys
 1 - Hatchet (once crafted)
 2 - Revolver (once crafted)
 
-Left Mouse Click - Shoot
+Left Mouse Click - Shoot/Attack/Pickup Item
+F - Sheathe Weapon

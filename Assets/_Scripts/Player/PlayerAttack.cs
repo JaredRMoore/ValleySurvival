@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class PlayerAttack : MonoBehaviour
 {
@@ -51,6 +52,9 @@ public class PlayerAttack : MonoBehaviour
 
     void WeaponShoot()
     {
+        if (EventSystem.current.IsPointerOverGameObject())
+            return;
+
         // If we have assault rifle (Probably not required in final version)
         if (weapon_Manager.GetCurrentSelectedWeapon().fireType == WeaponFireType.MULTIPLE)
         {

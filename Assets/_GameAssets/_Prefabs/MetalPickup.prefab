@@ -107,6 +107,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: 33f72666d7c27f04bbcd9236ea303d24, type: 2}
+  respawnTime: 300
 --- !u!114 &4407431705171528031
 MonoBehaviour:
   m_ObjectHideFlags: 0

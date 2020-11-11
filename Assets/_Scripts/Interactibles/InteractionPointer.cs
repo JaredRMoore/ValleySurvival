@@ -11,7 +11,7 @@ public class InteractionPointer : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            // central pixel ray
+            // Central pixel ray
             Ray ray = new Ray(Camera.main.transform.position, Camera.main.transform.forward);
 
             RaycastHit hit;
