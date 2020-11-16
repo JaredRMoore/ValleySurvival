@@ -104,7 +104,6 @@ public class HealthScript : MonoBehaviour
     }
 
     // Apply damage
-
     void PlayerDied()
     {
         if (is_Cannibal)
@@ -113,7 +112,7 @@ public class HealthScript : MonoBehaviour
             GetComponent<BoxCollider>().isTrigger = false;
             Rigidbody rb = GetComponent<Rigidbody>();
             rb.isKinematic = false;
-            rb.AddTorque(-transform.forward * 10f);
+            rb.AddTorque(-transform.forward * 20f);
 
             enemy_Controller.enabled = false;
             navAgent.enabled = false;

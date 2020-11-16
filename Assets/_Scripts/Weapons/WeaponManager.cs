@@ -10,37 +10,50 @@ public class WeaponManager : MonoBehaviour
 
     private int current_Weapon_Index;
 
+    public bool[] weaponsUnlocked = new bool[2];
+
     // Start is called before the first frame update
     void Start()
     {
-        current_Weapon_Index = 0;
-        weapons[current_Weapon_Index].gameObject.SetActive(false);
+        current_Weapon_Index = -1;
+        //weapons[current_Weapon_Index].gameObject.SetActive(false);
+    }
+
+    public void UnlockWeapon(int index)
+    {
+        weaponsUnlocked[index] = true;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha1))
+        if (weaponsUnlocked[0])
         {
-            TurnOnSelectedWeapon(0);
+            if (Input.GetKeyDown(KeyCode.Alpha1))
+            {
+                TurnOnSelectedWeapon(0);
+            }
+            if (Input.GetKeyDown(KeyCode.Keypad1))
+            {
+                TurnOnSelectedWeapon(0);
+            }
         }
-        if (Input.GetKeyDown(KeyCode.Keypad1))
+        if (weaponsUnlocked[1])
         {
-            TurnOnSelectedWeapon(0);
+            if (Input.GetKeyDown(KeyCode.Alpha2))
+            {
+                TurnOnSelectedWeapon(1);
+            }
+            if (Input.GetKeyDown(KeyCode.Keypad2))
+            {
+                TurnOnSelectedWeapon(1);
+            }
         }
-        if (Input.GetKeyDown(KeyCode.Alpha2))
-        {
-            TurnOnSelectedWeapon(1);
-        }
-        if (Input.GetKeyDown(KeyCode.Keypad2))
-        {
-            TurnOnSelectedWeapon(1);
-        }
-
         // Sheathe current weapon
-        if (Input.GetKeyDown(KeyCode.F))
+        if (Input.GetKeyDown(KeyCode.F) && current_Weapon_Index >= 0)
         {
             TurnOffSelectedWeapon(current_Weapon_Index);
+            current_Weapon_Index = -1;
         }
     }
     void TurnOnSelectedWeapon(int weaponIndex)
@@ -49,7 +62,8 @@ public class WeaponManager : MonoBehaviour
             return;
 
         // Turn off the current weapon
-        weapons[current_Weapon_Index].gameObject.SetActive(false);
+        if (current_Weapon_Index >= 0)
+            weapons[current_Weapon_Index].gameObject.SetActive(false);
 
         // Turn on the selected weapon
         weapons[weaponIndex].gameObject.SetActive(true);
@@ -66,6 +80,8 @@ public class WeaponManager : MonoBehaviour
 
     public WeaponHandler GetCurrentSelectedWeapon()
     {
+        if (current_Weapon_Index < 0)
+            return null;
         return weapons[current_Weapon_Index];
     }
 }

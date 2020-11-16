@@ -55,6 +55,9 @@ public class PlayerAttack : MonoBehaviour
         if (EventSystem.current.IsPointerOverGameObject())
             return;
 
+        if (weapon_Manager.GetCurrentSelectedWeapon() == null)
+            return;
+
         // If we have assault rifle (Probably not required in final version)
         if (weapon_Manager.GetCurrentSelectedWeapon().fireType == WeaponFireType.MULTIPLE)
         {
@@ -96,6 +99,9 @@ public class PlayerAttack : MonoBehaviour
     // Weapon shoot
     void ZoomInAndOut()
     {
+        if (weapon_Manager.GetCurrentSelectedWeapon() == null)
+            return;
+
         // We are going to aim with our camera on the weapon
         if (weapon_Manager.GetCurrentSelectedWeapon().weapon_Aim == WeaponAim.AIM)
         {

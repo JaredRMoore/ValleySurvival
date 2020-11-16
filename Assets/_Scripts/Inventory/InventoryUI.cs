@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class InventoryUI : MonoBehaviour
 {
@@ -26,6 +27,12 @@ public class InventoryUI : MonoBehaviour
         for (int i = 0; i < inventory.items.Length; i++)
         {
             slots [i] = Instantiate(slotPrefab, transform);
+            Button button = slots[i].GetComponent<Button>();
+            if (button)
+            {
+                int index = i;
+                button.onClick.AddListener(() => OnItemClicked(index)); 
+            }
         }
 
         // Set the correct item in every slot
@@ -33,6 +40,12 @@ public class InventoryUI : MonoBehaviour
         {
             slots[i].SetItem(inventory.items[i]);
         }
+    }
+
+    void OnItemClicked(int index)
+    {
+        inventory.items[index] = null;
+        slots[index].SetItem(inventory.items[index]);
     }
 
     private void Update()

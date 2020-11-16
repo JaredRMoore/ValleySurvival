@@ -7,4 +7,5 @@ public class Recipe : ScriptableObject
 {
     public Item[] ingredients;
     public GameObject product;
+    public int weaponUnlock = -1;
 }
