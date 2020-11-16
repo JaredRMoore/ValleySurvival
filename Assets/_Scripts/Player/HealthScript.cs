@@ -152,7 +152,9 @@ public class HealthScript : MonoBehaviour
 
             GetComponent<FirstPersonController>().enabled = false;
             GetComponent<PlayerAttack>().enabled = false;
-            GetComponent<WeaponManager>().GetCurrentSelectedWeapon().gameObject.SetActive(false);
+            var weapon = GetComponent<WeaponManager>().GetCurrentSelectedWeapon();
+            if (weapon)
+                weapon.gameObject.SetActive(false);
         }
 
         if (tag == Tags.PLAYER_TAG)
